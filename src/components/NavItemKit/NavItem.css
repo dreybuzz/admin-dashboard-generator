@@ -1,4 +1,5 @@
 .custom-textarea {
   height: 10em !important;
+  max-height: 15em !important;
   line-height: 2 !important;
 }

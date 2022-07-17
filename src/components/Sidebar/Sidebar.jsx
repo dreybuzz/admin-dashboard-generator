@@ -1,14 +1,7 @@
-import { useState } from "react"
 import NavItem from "../NavItemKit/NavItem"
 import "./Sidebar.css"
-export default function Sidebar() {
-  const [navItems, setNavItems] = useState([
-    {
-      title: "Home",
-      icon: "home",
-    },
-  ])
 
+export default function Sidebar({ navItems, setNavItems }) {
   function addNewNavItem() {
     setNavItems((navItems) => [...navItems, { title: "Nav Item" }])
   }
@@ -22,7 +15,6 @@ export default function Sidebar() {
         return navItem
       })
     })
-    console.log(navItems)
   }
 
   return (

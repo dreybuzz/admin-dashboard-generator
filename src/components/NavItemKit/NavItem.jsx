@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, Fragment } from "react"
 import Accordion from "../Accordion/Accordion"
 import SelectIcon from "../SelectIcon/SelectIcon"
 import "./NavItem.css"
@@ -15,10 +15,6 @@ export default function NavItem({
 
   function changeNavItemIcon(id, icon) {
     editNavItemFunc(id, "icon", icon)
-  }
-
-  function joinArray(array, separator = "") {
-    array.join(separator)
   }
 
   const accordionContent = (
@@ -49,21 +45,28 @@ export default function NavItem({
           placeholder=" "
           value={
             navItemChildren.length
-              ? joinArray(navItemChildren)
-              : joinArray(children)
+              ? navItemChildren.join(",")
+              : children.join(",")
           }
           onChange={(e) => {
+            let currentInput = e.target.value
             let parsedInput =
-              e.data === "," ? e.target.value + "\n" : e.target.value
-            setNavItemChildren(parsedInput)
+              currentInput[currentInput.length - 1] === ","
+                ? `${currentInput} \n`
+                : currentInput
 
+            setNavItemChildren(parsedInput.split(","))
+
+            // Change Children Array In NavItems Array
             editNavItemFunc(
               id,
               "children",
-              e.target.value
-                .replaceAll("\n", "")
-                .split(",")
-                .map((item) => item.trim())
+              currentInput.length
+                ? currentInput
+                    .replaceAll("\n", "")
+                    .split(",")
+                    .map((item) => item.trim())
+                : null
             )
           }}></textarea>
         <label>Comma Separated Children</label>
