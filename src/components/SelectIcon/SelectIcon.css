@@ -1,0 +1,9 @@
+.selection-container {
+  resize: vertical;
+  overflow: auto;
+  max-height: 20em;
+}
+
+.selected-icon-container {
+  background-color: var(--success) !important;
+}

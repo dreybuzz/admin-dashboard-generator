@@ -1,0 +1,11 @@
+aside {
+  overflow-y: scroll;
+}
+
+.add-nav-item-btn {
+  border-radius: 1em;
+}
+
+.add-nav-item-btn {
+  font-size: 2rem;
+}

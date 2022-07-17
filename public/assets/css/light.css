@@ -1,0 +1,14 @@
+body {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  transition: 1s;
+}
+
+aside {
+  background-color: var(--light-bg);
+}
+
+.border,
+.border-bottom {
+  border-color: var(--light-text) !important;
+}
