@@ -1,7 +1,8 @@
-import NavItem from "../NavItemKit/NavItem"
+import Config from "./PillContent/Config/Config"
+import NavBar from "./PillContent/NavBar/NavBar"
 import "./Sidebar.css"
 
-export default function Sidebar({ navItems, setNavItems }) {
+export default function Sidebar({ config, setConfig, navItems, setNavItems }) {
   function addNewNavItem() {
     setNavItems((navItems) => [...navItems, { title: "Nav Item" }])
   }
@@ -18,30 +19,51 @@ export default function Sidebar({ navItems, setNavItems }) {
   }
 
   return (
-    <aside className="col col-md-3 col-lg-2 col-xl-2 h-100 mh-100 p-4 rounded d-flex flex-column">
-      {navItems &&
-        navItems.length &&
-        navItems.map((navItem, index) => {
-          return (
-            <div key={index} className="row mt-3 fadeIn">
-              <NavItem
-                id={index}
-                title={navItem.title}
-                icon={navItem.icon}
-                children={navItem.children || []}
-                editNavItemFunc={editNavItem}
-              />
-            </div>
-          )
-        })}
+    <aside className="col col-md-3 col-lg-2 col-xl-2 h-100 mh-100 rounded d-flex flex-column p-1">
+      {/* Pills */}
+      <ul
+        className="nav nav-pills d-flex justify-content-between my-3 "
+        role="tablist">
+        {/* Config */}
+        <li className="nav-item">
+          <a className="nav-link active" data-bs-toggle="pill" href="#config">
+            Config
+          </a>
+        </li>
 
-      {/* Add New Nav Item */}
-      <div
-        className="my-5 d-flex justify-content-center align-items-center p-2 add-nav-item"
-        onClick={addNewNavItem}>
-        <i
-          className="bi bi-plus-square-fill d-flex add-nav-item-btn zoomIn p-2"
-          role={"button"}></i>
+        {/* NavBar */}
+        <li className="nav-item">
+          <a className="nav-link" data-bs-toggle="pill" href="#navbar">
+            NavBar
+          </a>
+        </li>
+
+        {/* Miscs */}
+        <li className="nav-item">
+          <a className="nav-link" data-bs-toggle="pill" href="#miscs">
+            Miscs
+          </a>
+        </li>
+      </ul>
+
+      {/* Pill Contents */}
+      <div className="tab-content h-100 mh-100 overflow-auto">
+        {/* Config */}
+        <Config config={config} setConfig={setConfig} />
+
+        {/* NavBar */}
+        <NavBar
+          navItems={navItems}
+          addNewNavItem={addNewNavItem}
+          editNavItem={editNavItem}
+        />
+
+        {/* Miscs */}
+        <div
+          id="miscs"
+          className="container-fluid tab-pane fade mt-3 rounded p-3">
+          Miscs
+        </div>
       </div>
     </aside>
   )

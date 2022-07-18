@@ -1,4 +1,4 @@
-import { useState, Fragment } from "react"
+import { useState, Fragment, useEffect } from "react"
 import Accordion from "../Accordion/Accordion"
 import SelectIcon from "../SelectIcon/SelectIcon"
 import "./NavItem.css"
@@ -6,7 +6,7 @@ import "./NavItem.css"
 export default function NavItem({
   id,
   title,
-  icon = "",
+  icon,
   children = [],
   editNavItemFunc,
 }) {
@@ -35,7 +35,13 @@ export default function NavItem({
 
       {/* Icon */}
       <div className="mt-3">
-        <SelectIcon navItem={id} name={icon} setIconFunc={changeNavItemIcon} />
+        {
+          // <SelectIcon
+          //   navItem={id}
+          //   name={icon}
+          //   setIconFunc={changeNavItemIcon}
+          // />
+        }
       </div>
 
       {/* Children */}
@@ -45,7 +51,7 @@ export default function NavItem({
           placeholder=" "
           value={
             navItemChildren.length
-              ? navItemChildren.join(",")
+              ? navItemChildren.join(", ")
               : children.join(",")
           }
           onChange={(e) => {

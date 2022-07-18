@@ -14,7 +14,7 @@ export default function Accordion({ header = "", content }) {
         </button>
       </h2>
 
-      <div id={`${accordionID}`} className="accordion-collapse collapse show">
+      <div id={`${accordionID}`} className="accordion-collapse collapse">
         <div className="accordion-body">{content}</div>
       </div>
     </div>

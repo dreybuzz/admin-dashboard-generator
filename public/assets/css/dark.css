@@ -42,3 +42,15 @@ aside {
 .select-icon-container {
   background-color: var(--dark-secondary) !important;
 }
+
+.hover {
+  transition: 0.5s;
+}
+
+.hover:hover {
+  background-color: var(--dark-secondary) !important;
+}
+
+.active {
+  background-color: var(--dark-secondary) !important;
+}

@@ -1,12 +1,8 @@
 import Main from "./components/Main/Main"
+import "./App.css"
 
 function App() {
-  return (
-    <div className={`d-flex flex-column flex-grow-1 h-100 mh-100`}>
-      {/* Main */}
-      <Main />
-    </div>
-  )
+  return <Main />
 }
 
 export default App
