@@ -1,0 +1,56 @@
+body {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  transition: 1s;
+}
+
+a,
+i {
+  color: var(--dark-text) !important;
+}
+
+input,
+textarea {
+  background-color: var(--dark-bg) !important;
+  border: 0 !important;
+  color: var(--dark-text) !important;
+}
+
+aside {
+  background-color: var(--dark-primary);
+}
+
+.accordion-button {
+  background-color: var(--dark-accent) !important;
+  color: var(--dark-text) !important;
+}
+
+.accordion-item {
+  background-color: var(--dark-secondary);
+  border: 0;
+}
+
+.accordion-body {
+  background-color: var(--dark-secondary);
+  color: var(--dark-text) !important;
+}
+
+.selection-container {
+  background-color: var(--dark-accent) !important;
+}
+
+.select-icon-container {
+  background-color: var(--dark-secondary) !important;
+}
+
+.hover {
+  transition: 0.5s;
+}
+
+.hover:hover {
+  background-color: var(--dark-secondary) !important;
+}
+
+.active {
+  background-color: var(--dark-secondary) !important;
+}

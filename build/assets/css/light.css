@@ -1,0 +1,44 @@
+body {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  transition: 1s;
+}
+
+a,
+i {
+  color: var(--light-text) !important;
+}
+
+input,
+textarea {
+  background-color: var(--light-bg) !important;
+  border: 0 !important;
+  color: var(--light-text) !important;
+}
+
+aside {
+  background-color: var(--light-primary);
+}
+
+.accordion-button {
+  background-color: var(--light-accent) !important;
+  color: var(--light-text) !important;
+}
+
+.accordion-item {
+  background-color: var(--light-secondary);
+  border: 0;
+}
+
+.accordion-body {
+  background-color: var(--light-secondary);
+  color: var(--light-text) !important;
+}
+
+.selection-container {
+  background-color: var(--light-accent) !important;
+}
+
+.select-icon-container {
+  background-color: var(--light-secondary) !important;
+}
