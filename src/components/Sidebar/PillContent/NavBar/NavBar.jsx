@@ -2,12 +2,12 @@ import NavItem from "../../../NavItemKit/NavItem"
 export default function NavBar({ navItems, addNewNavItem, editNavItem }) {
   console.log(navItems)
   return (
-    <div id="navbar" className="container-fluid tab-pane fade rounded">
+    <div id="navbar" className="container-fluid tab-pane fade rounded mt-3 p-3">
       {navItems &&
         navItems.length &&
         navItems.map((navItem, index) => {
           return (
-            <div key={index} className="row mt-3 fadeIn">
+            <div key={index} className="mt-3 fadeIn">
               <NavItem
                 id={index}
                 title={navItem.title}

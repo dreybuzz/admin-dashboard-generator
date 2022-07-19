@@ -3,6 +3,5 @@
 }
 
 .preview-header {
-  min-height: 10%;
-  max-height: 10%;
+  max-height: 5em !important;
 }

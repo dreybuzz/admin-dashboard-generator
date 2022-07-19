@@ -6,7 +6,7 @@ export default function Main() {
   // Config State
   const [config, setConfig] = useState({
     identity: {
-      title: "Admin",
+      title: "Admin Dashboard",
     },
     user: {
       username: "thanos",
