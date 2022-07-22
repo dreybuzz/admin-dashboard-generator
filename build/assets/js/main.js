@@ -10,5 +10,4 @@ themeToggler.addEventListener("click", () => {
         document.head.innerHTML += '<link rel="stylesheet" href="./assets/css/dark.css">';
         themeToggler.dataset.theme = "dark"
     }
-
 })
