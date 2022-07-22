@@ -36,11 +36,11 @@ export default function NavItem({
       {/* Icon */}
       <div className="mt-3">
         {
-          // <SelectIcon
-          //   navItem={id}
-          //   name={icon}
-          //   setIconFunc={changeNavItemIcon}
-          // />
+          <SelectIcon
+            navItem={id}
+            name={icon}
+            setIconFunc={changeNavItemIcon}
+          />
         }
       </div>
 
