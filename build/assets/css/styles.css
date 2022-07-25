@@ -46,6 +46,12 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
+::-webkit-scrollbar {
+  width: 0.2rem;
+  height: 0.2rem;
+  background-color: #1e1e2d;
+}
+
 /* label {
   font-size: 0.75rem;
 } */
